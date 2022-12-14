@@ -1,3 +1,11 @@
-export default function Main({ children }) {
-  return <main>{children}</main>;
+import EntriesSection from "../EntriesSection";
+import EntryForm from "../EntryForm";
+
+export default function Main() {
+  return (
+    <main>
+      <EntryForm></EntryForm>
+      <EntriesSection></EntriesSection>
+    </main>
+  );
 }

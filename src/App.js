@@ -8,7 +8,7 @@ function App() {
     <>
       <Header>Journal</Header>
       <Main></Main>
-      <Footer></Footer>
+      <Footer>Journal App - 2028</Footer>
     </>
   );
 }
