@@ -1,4 +1,4 @@
-import { entries } from "../../Database";
+import { entries } from "../../Database/Database";
 import EntryCard from "../EntryCard";
 
 export default function EntryList() {

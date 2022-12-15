@@ -1,0 +1,6 @@
+span {
+  background-color: var(--color-water-10);
+  border-radius: 30%;
+  padding: 0 0.4rem;
+  margin-left: 0.2rem;
+}

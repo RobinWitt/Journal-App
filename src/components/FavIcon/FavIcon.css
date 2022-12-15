@@ -1,4 +1,7 @@
 .fav-button {
+  position: absolute;
+  top: 0rem;
+  right: 0.5rem;
   background-color: transparent;
   border: none;
 }
