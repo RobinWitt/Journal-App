@@ -1,10 +1,11 @@
+import Button from "../Button";
 import EntryList from "../EntryList";
 
 export default function EntriesSection() {
   return (
     <>
-      <tabs>All Entries</tabs>
-      <tabs>Favorites</tabs>
+      <Button>All Entries</Button>
+      <Button>Favorites</Button>
       <EntryList></EntryList>
     </>
   );

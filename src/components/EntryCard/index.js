@@ -1,12 +1,12 @@
-import { ReactComponent as Logo } from "../../resources/star.svg";
+import FavIcon from "../FavIcon";
 
-export default function EntryCard({ title, date, text, fav }) {
+export default function EntryCard({ title, date, text, isFaved }) {
   return (
     <>
       <li>
         <p>{date}</p>
         <h3>{title}</h3>
-        <Logo />
+        <FavIcon isFaved={isFaved} />
         <p>{text}</p>
       </li>
     </>
