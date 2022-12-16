@@ -5,6 +5,10 @@
   border-top: 2px dashed var(--color-granite);
 }
 
+.entry-list__item {
+  list-style: none;
+}
+
 .entries-button {
   background-color: transparent;
   color: var(--color-granite);

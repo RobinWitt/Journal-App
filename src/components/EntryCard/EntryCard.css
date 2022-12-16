@@ -14,3 +14,7 @@ article {
   margin: 0.5rem 0;
   padding-right: 3rem;
 }
+
+.hidden {
+  display: none;
+}
