@@ -4,7 +4,12 @@ import "./FavIcon.css";
 
 export default function FavIcon({ bookmarked }) {
   return (
-    <button type="button" aria-label="mark as favorite" className="fav-button">
+    <button
+      type="button"
+      aria-label="mark as favorite"
+      className="fav-button"
+      onClick={() => {}}
+    >
       {bookmarked ? <StarFilled /> : <StarEmpty />}
     </button>
   );

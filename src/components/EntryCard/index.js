@@ -2,7 +2,6 @@ import FavIcon from "../FavIcon";
 import "./EntryCard.css";
 
 export default function EntryCard({ title, date, text, bookmark, display }) {
-  console.log(bookmark, display);
   return (
     <>
       <article className={display || bookmark ? "" : "hidden"}>
