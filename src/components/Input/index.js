@@ -1,8 +1,8 @@
-export default function Input({ title }) {
+export default function Input({ id, title, name, type }) {
   return (
     <>
-      <label htmlFor={title}>{title}</label>
-      <input id={title} name={title}></input>
+      <label htmlFor={id}>{title}</label>
+      <input id={id} name={name} type={type}></input>
     </>
   );
 }

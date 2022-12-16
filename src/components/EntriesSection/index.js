@@ -1,41 +1,23 @@
 import EntriesCounter from "../EntriesCounter";
 import EntryList from "../EntryList";
-import { entries } from "../../Database/Database.js";
 import "./EntriesSection.css";
-import { useState } from "react";
 
-const bookmarkedEntries = entries
-  .map(({ bookmark }) => {
-    return bookmark;
-  })
-  .filter(Boolean).length;
-
-export default function EntriesSection() {
-  const [active, setActive] = useState(true);
-
+export default function EntriesSection({ entries, bookmarkedEntries }) {
   return (
     <div className="entries-section--container">
       <button
         type="button"
-        className={`entries-button ${active ? "active-tab" : ""}`}
-        onClick={() => {
-          setActive(true);
-        }}
+        className="entries-button active-tab"
+        onClick={() => {}}
       >
         All Entries
         <EntriesCounter count={entries.length} />
       </button>
-      <button
-        type="button"
-        className={`entries-button ${!active ? "active-tab" : ""}`}
-        onClick={() => {
-          setActive(false);
-        }}
-      >
+      <button type="button" className="entries-button" onClick={() => {}}>
         Favorites
-        <EntriesCounter count={bookmarkedEntries} />
+        <EntriesCounter count={bookmarkedEntries.length} />
       </button>
-      <EntryList display={active}></EntryList>
+      <EntryList filteredEntries={entries}></EntryList>
     </div>
   );
 }
