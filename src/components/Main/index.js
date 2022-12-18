@@ -26,6 +26,7 @@ export default function Main() {
         entry.id === id ? { ...entry, bookmark: !entry.bookmark } : entry
       )
     );
+    console.log(`Changed bookmark status on entry nr. ${id}`);
   }
 
   return (

@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import EntriesCounter from "../EntriesCounter";
 import EntryCard from "../EntryCard";
 import "./EntriesSection.css";
