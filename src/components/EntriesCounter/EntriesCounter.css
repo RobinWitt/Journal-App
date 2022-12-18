@@ -1,6 +1,11 @@
-span {
+.span {
   background-color: var(--color-water-10);
-  border-radius: 30%;
-  padding: 0 0.4rem;
+  border-radius: 100px;
+  padding: 0.2rem 0.6rem;
   margin-left: 0.2rem;
+}
+
+.span-active {
+  background-color: var(--color-nemo);
+  color: var(--color-foam);
 }

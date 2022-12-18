@@ -7,9 +7,10 @@ import "./Main.css";
 
 export default function Main() {
   const [entries, setEntries] = useState(initialEntries);
-  const bookmarkedEntries = entries.filter((entry) => entry.bookmark);
+  const [filter, setFilter] = useState("all");
+  const favoriteEntries = entries.filter((entry) => entry.bookmark);
 
-  function handleOnSubmit(event) {
+  function handleAddEntry(event) {
     event.preventDefault();
 
     const formData = new FormData(event.target);
@@ -29,12 +30,24 @@ export default function Main() {
     console.log(`Changed bookmark status on entry nr. ${id}`);
   }
 
+  function handleShowFavoriteEntries() {
+    setFilter("favorite");
+  }
+
+  function handleShowAllEntries() {
+    setFilter("all");
+  }
+
   return (
     <main>
-      <EntryForm onSubmit={handleOnSubmit} entries={entries}></EntryForm>
+      <EntryForm onSubmit={handleAddEntry} entries={entries}></EntryForm>
       <EntriesSection
+        onShowFavoriteEntries={handleShowFavoriteEntries}
+        onShowAllEntries={handleShowAllEntries}
+        displayedEntries={filter === "all" ? entries : favoriteEntries}
         entries={entries}
-        bookmarkedEntries={bookmarkedEntries}
+        favoriteEntries={favoriteEntries}
+        filter={filter}
         onToggleBookmark={handleToggleBookmark}
       ></EntriesSection>
     </main>
