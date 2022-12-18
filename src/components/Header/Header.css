@@ -3,6 +3,7 @@ header {
   z-index: 100;
   top: 0;
   width: 100%;
+  max-width: 700px;
   height: 60px;
   background-color: lightgrey;
   display: flex;
