@@ -1,41 +1,51 @@
-import EntriesCounter from "../EntriesCounter";
-import EntryList from "../EntryList";
-import { entries } from "../../Database/Database.js";
+import EntryCard from "../EntryCard";
+import Tab from "../Tab";
+import Tabs from "../Tabs";
 import "./EntriesSection.css";
-import { useState } from "react";
 
-const bookmarkedEntries = entries
-  .map(({ bookmark }) => {
-    return bookmark;
-  })
-  .filter(Boolean).length;
-
-export default function EntriesSection() {
-  const [active, setActive] = useState(true);
-
+export default function EntriesSection({
+  entries,
+  favoriteEntries,
+  displayedEntries,
+  filter,
+  onToggleBookmark,
+  onShowAllEntries,
+  onShowFavoriteEntries,
+}) {
   return (
-    <div className="entries-section--container">
-      <button
-        type="button"
-        className={`entries-button ${active ? "active-tab" : ""}`}
-        onClick={() => {
-          setActive(true);
-        }}
-      >
-        All Entries
-        <EntriesCounter count={entries.length} />
-      </button>
-      <button
-        type="button"
-        className={`entries-button ${!active ? "active-tab" : ""}`}
-        onClick={() => {
-          setActive(false);
-        }}
-      >
-        Favorites
-        <EntriesCounter count={bookmarkedEntries} />
-      </button>
-      <EntryList display={active}></EntryList>
-    </div>
+    <section className="entries-section--container">
+      <Tabs>
+        <Tab
+          tabTitle={"All Entries"}
+          count={entries.length}
+          onClick={onShowAllEntries}
+          isActive={filter === "all" ? true : false}
+        />
+        <Tab
+          tabTitle={"Favorites"}
+          count={favoriteEntries.length}
+          onClick={onShowFavoriteEntries}
+          isActive={filter === "favorite" ? true : false}
+        />
+      </Tabs>
+      <div>
+        {displayedEntries.map(
+          ({ id, date, title, text, bookmark: isBookmarked }) => {
+            return (
+              <div className="entry-list__item" key={id}>
+                <EntryCard
+                  id={id}
+                  date={date}
+                  title={title}
+                  text={text}
+                  isBookmarked={isBookmarked}
+                  onToggleBookmark={onToggleBookmark}
+                />
+              </div>
+            );
+          }
+        )}
+      </div>
+    </section>
   );
 }

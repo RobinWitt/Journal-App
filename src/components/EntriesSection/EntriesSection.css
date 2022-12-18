@@ -4,18 +4,3 @@
   margin-top: 1rem;
   border-top: 2px dashed var(--color-granite);
 }
-
-.entry-list__item {
-  list-style: none;
-}
-
-.entries-button {
-  background-color: transparent;
-  color: var(--color-granite);
-  border: none;
-  margin: 1.5rem 0 0 1rem;
-}
-
-.active-tab {
-  color: var(--color-nemo);
-}

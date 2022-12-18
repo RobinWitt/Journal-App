@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <Header>Journal</Header>
-      <Main></Main>
+      <Main />
       <Footer>Journal App - 2028</Footer>
     </>
   );

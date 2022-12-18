@@ -1,0 +1,20 @@
+.toast {
+  position: fixed;
+  bottom: 80px;
+  right: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  height: 40px;
+  padding: 5px;
+  background-color: var(--color-foam);
+  border: none;
+  border-radius: 3px;
+  box-shadow: 5px 5px 10px 5px grey;
+  transition: transform 1s cubic-bezier(0.17, 0.67, 0.79, 1.52);
+}
+
+.toast-hidden {
+  transform: translateX(150%);
+}

@@ -1,4 +1,4 @@
-export const entries = [
+export const initialEntries = [
   {
     id: 1,
     date: "2022-01-01",
@@ -49,3 +49,14 @@ export const entries = [
     bookmark: false,
   },
 ];
+
+/*function generateId() {
+  return Math.random().toString(36).substr(2, 10);
+}
+
+const updatedEntries = initialEntries.map((entry) => ({
+  ...entry,
+  id: generateId(),
+}));
+
+console.log(updatedEntries);*/
