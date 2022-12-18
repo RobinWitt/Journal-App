@@ -2,7 +2,11 @@ import EntriesCounter from "../EntriesCounter";
 import EntryList from "../EntryList";
 import "./EntriesSection.css";
 
-export default function EntriesSection({ entries, bookmarkedEntries }) {
+export default function EntriesSection({
+  entries,
+  bookmarkedEntries,
+  onToggleBookmark,
+}) {
   return (
     <div className="entries-section--container">
       <button
@@ -17,7 +21,10 @@ export default function EntriesSection({ entries, bookmarkedEntries }) {
         Favorites
         <EntriesCounter count={bookmarkedEntries.length} />
       </button>
-      <EntryList filteredEntries={entries}></EntryList>
+      <EntryList
+        filteredEntries={entries}
+        onToggleBookmark={onToggleBookmark}
+      ></EntryList>
     </div>
   );
 }

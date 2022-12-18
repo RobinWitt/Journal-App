@@ -19,7 +19,14 @@ export default function Main() {
     //event.target.reset()
     //event.target.name.focus()
   }
-  // function handleBookmarkEntry(){entries.map}
+
+  function handleToggleBookmark(id) {
+    setEntries(
+      entries.map((entry) =>
+        entry.id === id ? { ...entry, bookmark: !entry.bookmark } : entry
+      )
+    );
+  }
 
   return (
     <main>
@@ -27,6 +34,7 @@ export default function Main() {
       <EntriesSection
         entries={entries}
         bookmarkedEntries={bookmarkedEntries}
+        onToggleBookmark={handleToggleBookmark}
       ></EntriesSection>
     </main>
   );
