@@ -1,5 +1,6 @@
+import { Fragment } from "react";
 import EntriesCounter from "../EntriesCounter";
-import EntryList from "../EntryList";
+import EntryCard from "../EntryCard";
 import "./EntriesSection.css";
 
 export default function EntriesSection({
@@ -21,10 +22,22 @@ export default function EntriesSection({
         Favorites
         <EntriesCounter count={bookmarkedEntries.length} />
       </button>
-      <EntryList
-        filteredEntries={entries}
-        onToggleBookmark={onToggleBookmark}
-      ></EntryList>
+      <div>
+        {entries.map(({ id, date, title, text, bookmark: isBookmarked }) => {
+          return (
+            <div className="entry-list__item" key={id}>
+              <EntryCard
+                id={id}
+                date={date}
+                title={title}
+                text={text}
+                isBookmarked={isBookmarked}
+                onToggleBookmark={onToggleBookmark}
+              />
+            </div>
+          );
+        })}
+      </div>
     </div>
   );
 }
