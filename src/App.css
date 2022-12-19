@@ -5,19 +5,6 @@
 }
 
 :root {
-  /* Used for texts (+ footer background) */
-  --color-granite: #252629;
-  /* Used for backgrounds (+ footer text color) */
-  --color-foam: #ffffff;
-  /* Used for buttons, icons, etc. */
-  --color-nemo: #ff4a11;
-  /* active color for buttons, icons, etc. */
-  --color-nemo-mid: #ff5c29;
-  /* hover color for buttons, icons, etc. */
-  --color-nemo-dark: #e5430f;
-  /* Used for borders and some backgrounds */
-  --color-water-10: #e4e8f0;
-
   --color-primary: #202020;
   --color-secondary: #404040;
   --color-accent: #ff4a11;
@@ -29,19 +16,6 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    /* Used for texts (+ footer background) */
-    --color-granite: #252629;
-    /* Used for backgrounds (+ footer text color) */
-    --color-foam: #ffffff;
-    /* Used for buttons, icons, etc. */
-    --color-nemo: #ff4a11;
-    /* active color for buttons, icons, etc. */
-    --color-nemo-mid: #ff5c29;
-    /* hover color for buttons, icons, etc. */
-    --color-nemo-dark: #e5430f;
-    /* Used for borders and some backgrounds */
-    --color-water-10: #e4e8f0;
-
     --color-primary: #ffffff;
     --color-secondary: #e4e8f0;
     --color-accent: #ff4a11;
