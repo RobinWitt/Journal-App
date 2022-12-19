@@ -1,6 +1,6 @@
 .tab {
   background-color: transparent;
-  color: var(--color-granite);
+  color: var(--color-primary);
   border: none;
   border-radius: 999px;
   font-size: 1rem;
@@ -11,9 +11,9 @@
 }
 
 .tab:hover {
-  background-color: var(--color-water-10);
+  background-color: var(--color-background-secondary);
 }
 
 .tab-active {
-  color: var(--color-nemo);
+  color: var(--color-accent);
 }

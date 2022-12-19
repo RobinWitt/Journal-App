@@ -5,7 +5,7 @@ header {
   width: 100%;
   max-width: 900px;
   height: 60px;
-  background-color: lightgrey;
+  background-color: var(--color-background-secondary);
   display: flex;
   align-items: center;
   justify-content: center;

@@ -12,7 +12,11 @@ export default function FavIcon({ id, isBookmarked, onToggleBookmark }) {
         onToggleBookmark(id);
       }}
     >
-      {isBookmarked ? <StarFilled /> : <StarEmpty />}
+      {isBookmarked ? (
+        <StarFilled />
+      ) : (
+        <StarEmpty style={{ color: "lightgrey" }} />
+      )}
     </button>
   );
 }

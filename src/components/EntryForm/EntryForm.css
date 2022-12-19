@@ -15,9 +15,14 @@ label {
 input,
 textarea {
   width: 90%;
-  border: 2px solid var(--color-water-10);
+  border: 2px solid var(--color-border-input);
   border-radius: 3px;
   margin: 0.5rem 0;
+}
+
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--color-accent);
 }
 
 input {
@@ -31,11 +36,15 @@ textarea {
 
 .submit-button {
   margin-top: 0.5rem;
-  background-color: var(--color-nemo);
-  color: white;
+  background-color: var(--color-accent);
+  color: var(--color-primary);
   border: none;
   padding: 0.7rem 1.2rem;
   border-radius: 3px;
   font-weight: 600;
   font-size: 1rem;
+}
+
+.submit-button:hover {
+  background-color: var(--color-hover);
 }

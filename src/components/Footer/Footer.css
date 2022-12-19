@@ -6,7 +6,7 @@ footer {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-granite);
-  color: var(--color-water-10);
+  background-color: var(--color-background-secondary);
+  color: var(--color-secondary);
   height: 3rem;
 }

@@ -1,6 +1,6 @@
 .entries-section--container {
   width: 90%;
   margin: auto;
-  margin-top: 1rem;
-  border-top: 2px dashed var(--color-granite);
+  margin-top: 1.5rem;
+  border-top: 2px dashed var(--color-secondary);
 }

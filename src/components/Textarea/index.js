@@ -1,3 +1,5 @@
+import "./Textarea.css";
+
 export default function Textarea({ title, name }) {
   return (
     <>
