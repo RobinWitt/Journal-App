@@ -8,6 +8,7 @@
 - "add & remove favorites"
 - "filter / show all entries or favorites"
 - "toast message"
+- "local storage entries"
 - ### next tasks:
 - "changing content of toast message for different events"
 - "set timeout on toast message" 
