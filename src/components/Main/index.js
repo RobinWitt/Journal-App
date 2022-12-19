@@ -1,4 +1,5 @@
 import { useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 import { nanoid } from "nanoid";
 import { initialEntries } from "../../Database/Database";
 import EntriesSection from "../EntriesSection";
@@ -7,7 +8,9 @@ import "./Main.css";
 import ToastMessage from "../ToastMessage";
 
 export default function Main() {
-  const [entries, setEntries] = useState(initialEntries);
+  const [entries, setEntries] = useLocalStorageState("entries", {
+    defaultValue: initialEntries,
+  });
   const [filter, setFilter] = useState("all");
   const [showToastMessage, setShowToastMessage] = useState(false);
   const [contentToastMessage, setContentToastMessage] = useState("");
